@@ -1,0 +1,123 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float phy ,prl ,cc1p ,exp;
+    float fon ,cc1f , cc2f, cc3f ,cc4f ,exf ,mf ;
+    float alg ,cc1a , cc2a , cc3a,exa ,ma ;
+    float ang ;
+    float uel;
+    float log , cc1l , cc2l , cc3l , exl;
+    float info , cc1i , cc2i , proj , exi ;
+    float moy ;
+
+
+    //physique
+    printf("PHYSIQUE !\n");
+    printf("saisire la note de cc1 !\n");
+    scanf("%f",cc1p  );
+    printf("saisire la note de partiel!\n");
+    scanf("%f", prl );
+    printf("saisire la note de lexamas  !\n");
+    scanf("%f", exp );
+    phy=cc1p+(3*prl)+(6*exp);
+    printf("pour une note de %f au cc1 et de %f au partiel et de %f en exam la note de physique sera %f!\n",cc1p,prl,exp,phy);
+
+    //fonction
+
+    printf("FONCTION!\n");
+    printf("saisire la note de cc1f !\n");
+    scanf("%f", cc1f );
+    printf("saisire la note de cc2f !\n");
+    scanf("%f",cc2f  );
+    printf("saisire la note de cc3f !\n");
+    scanf("%f",cc3f  );
+    printf("saisire la note de cc4f !\n");
+    scanf("%f",cc4f  );
+
+
+    printf("saisire la note de exf!\n");
+    scanf("%f",exf  );
+
+    mf=(cc1f+cc2f+cc3f+cc4f)/4;
+    if (mf<exf){
+        fon = exf;
+    }
+    else {
+        fon = (exf + mf)/2;
+    }
+    printf("pour les note %f %f %f %f cc1 cc2 cc3 cc4 et de %f en exam la note de fonc %f!\n",cc1f,cc2f,cc3f,cc4f,exf,fon);
+
+
+     //fonction
+
+    printf("ALGEBRE!\n");
+    printf("saisire la note de cc1a !\n");
+    scanf("%f", cc1a );
+    printf("saisire la note de cc2a !\n");
+    scanf("%f",cc2a  );
+    printf("saisire la note de cc3a !\n");
+    scanf("%f",cc3a  );
+
+    printf("saisire la note de exa!\n");
+    scanf("%f",exa  );
+
+    ma=(cc1a+cc2a+cc3a)/3;
+    if (ma<exa){
+        alg = exa;
+    }
+    else {
+        alg = (exa + ma)/2;
+    }
+    printf("pour les note %f %f %f cc1 cc2 cc3 et de %f en exam la note de algebre %f!\n",cc1a,cc2a,cc3a,exa,alg);
+
+    // ang
+    printf("ANGLAIS!\n");
+     printf("saisire la note de ANGLAIS !\n");
+    scanf("%f",ang );
+    printf("l note de langlais et  %f!\n",ang);
+
+        // UEL
+    printf("UEL!\n");
+     printf("saisire la note de UEL !\n");
+    scanf("%f",uel );
+    printf("l note de langlais et  %f!\n",uel);
+
+
+    // logique
+
+       printf("LOGIQUE !\n");
+    printf("saisire la note de cc1l !\n");
+    scanf("%f",cc1l  );
+     printf("saisire la note de cc2l !\n");
+    scanf("%f",cc2l  );
+  printf("saisire la note de cc3l !\n");
+    scanf("%f",cc3l  );
+    printf("saisire la note de lexamas  !\n");
+    scanf("%f", exl );
+    log=(((cc1l+cc2l+cc3l)/3)+exl)/2 ;
+    printf("pour une note de %f %f %f  cc1 cc2 cc3 et de %f en exam la note de logique sera %f!\n",cc1l,cc2l, cc3l,exl,log);
+
+
+
+     // info
+
+
+
+     printf("INFO !\n");
+    printf("saisire la note de cc1i!\n");
+    scanf("%f",cc1i  );
+     printf("saisire la note de cc2i !\n");
+    scanf("%f",cc2i  );
+  printf("saisire la note de proj!\n");
+    scanf("%f",proj);
+    printf("saisire la note de lexamas  !\n");
+    scanf("%f", exi );
+    info=(((cc1i+cc2i+proj)/3)+exi)/2 ;
+    printf("pour une note de %f %f %f  cc1 cc2 projet et de %f en exam la note d'info sera %f!\n",cc1i,cc2i,proj,exi,info);
+
+    moy = ((6*alg)+(6*fon)+(6*phy)+(3*uel)+(3*ang)+(3*info)+(3*log))/30 ;
+  printf("MOYENNE=%f !\n",moy);
+    return 0;
+}
